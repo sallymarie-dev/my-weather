@@ -25,3 +25,8 @@ var alberquerque = {
     weathercode: 1,
   },
 };
+
+// Display weather data
+setText("temp", alberquerqueWeather.current_weather.temperature);
+setText("wind", alberquerqueWeather.current_weather.windspeed);
+setText("code", alberquerqueWeather.current_weather.weathercode);
