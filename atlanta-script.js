@@ -10,9 +10,7 @@ var atlantaWeather = {
 };
 
 // Display Atlanta weather data
-console.log(atlantaWeather.current_weather.temperature);
-console.log(atlantaWeather.current_weather.windspeed);
-console.log(atlantaWeather.current_weather.weathercode);
+
 setText("atlantatemp", atlantaWeather.current_weather.temperature);
 setText("atlantawind", atlantaWeather.current_weather.windspeed);
 setText("atlantacode", atlantaWeather.current_weather.weathercode);
