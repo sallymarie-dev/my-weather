@@ -25,7 +25,7 @@ var seattleWeather = {
         "weathercode": 3
     }
 }
-// Display Atlanta weather data
-setText("temp", seattleWeather.current_weather.temperature);
-setText("wind", seattleWeather.current_weather.windspeed);
-setText("code", seattleWeather.current_weather.weathercode);
+// Display Seattle weather data
+setText("seattletemp", seattleWeather.current_weather.temperature);
+setText("seattlewind", seattleWeather.current_weather.windspeed);
+setText("seattlecode", seattleWeather.current_weather.weathercode);

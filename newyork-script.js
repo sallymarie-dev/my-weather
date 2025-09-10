@@ -1,4 +1,5 @@
 // New York weather data POJO
+
 var newyorkWeather = {
     "latitude": 40.710335,
     "longitude": -73.99309,
@@ -27,7 +28,7 @@ var newyorkWeather = {
     }
 }
 
-// Display Atlanta weather data
-setText("temp", newyorkeather.current_weather.temperature);
-setText("wind", newyorkWeather.current_weather.windspeed);
-setText("code", newyorkWeather.current_weather.weathercode);
+// Display New York weather data
+setText("newyorktemp", newyorkWeather.current_weather.temperature);
+setText("newyorkwind", newyorkWeather.current_weather.windspeed);
+setText("newyorkcode", newyorkWeather.current_weather.weathercode);

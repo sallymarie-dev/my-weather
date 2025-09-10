@@ -1,4 +1,4 @@
-var alberquerque = {
+var alberquerqueWeather = {
   latitude: 34.994064,
   longitude: -105.99934,
   generationtime_ms: 0.164031982421875,
@@ -27,6 +27,35 @@ var alberquerque = {
 };
 
 // Display weather data
-setText("temp", alberquerqueWeather.current_weather.temperature);
-setText("wind", alberquerqueWeather.current_weather.windspeed);
-setText("code", alberquerqueWeather.current_weather.weathercode);
+function updatecard() {
+  setText("alberquerquetemp", result);
+  // setText("alberquerquewind", result.current_weather.windspeed);
+  // setText("alberquerquecode", result.current_weather.weathercode);
+}
+
+fetchinformation();
+
+function fetchinformation() {
+  const requestOptions = {
+    method: "GET",
+    redirect: "follow",
+  };
+
+  fetch(
+    "https://api.open-meteo.com/v1/forecast?latitude=34.994064&longitude=-105.99934&current_weather=true",
+    requestOptions
+  )
+    .then((response) => response.json())
+    .then(function (result) {
+      console.log(result);
+      updatecard();
+    })
+
+    .catch((error) => console.error(error));
+}
+console.log(alberquerqueWeather.current_weather.temperature);
+console.log(alberquerqueWeather.current_weather.windspeed);
+console.log(alberquerqueWeather.current_weather.weathercode);
+setText("alberquerquetemp", alberquerqueWeather.current_weather.temperature);
+setText("alberquerquewind", alberquerqueWeather.current_weather.windspeed);
+setText("alberquerquecode", alberquerqueWeather.current_weather.weathercode);
