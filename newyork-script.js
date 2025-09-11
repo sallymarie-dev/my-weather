@@ -29,6 +29,8 @@ var newyorkWeather = {
 }
 
 // Display New York weather data
+onEvent("show-weather", "click", function () {
 setText("newyorktemp", newyorkWeather.current_weather.temperature);
 setText("newyorkwind", newyorkWeather.current_weather.windspeed);
 setText("newyorkcode", newyorkWeather.current_weather.weathercode);
+});

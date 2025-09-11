@@ -26,12 +26,13 @@ var alberquerqueWeather = {
   },
 };
 
-// Display weather data
-function updatecard() {
-  setText("alberquerquetemp", result);
-  // setText("alberquerquewind", result.current_weather.windspeed);
-  // setText("alberquerquecode", result.current_weather.weathercode);
-}
+ //Display weather data
+onEvent("show-weather", "click", function () {
+  setText("alberquerquetemp", alberquerqueWeather.current_weather.temperature);
+  setText("alberquerquewind", alberquerqueWeather.current_weather.windspeed);
+  setText("alberquerquecode", alberquerqueWeather.current_weather.weathercode);
+});
+
 
 fetchinformation();
 
