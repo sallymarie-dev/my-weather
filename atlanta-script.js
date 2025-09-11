@@ -14,3 +14,7 @@ var atlantaWeather = {
 setText("atlantatemp", atlantaWeather.current_weather.temperature);
 setText("atlantawind", atlantaWeather.current_weather.windspeed);
 setText("atlantacode", atlantaWeather.current_weather.weathercode);
+
+onEvent("show-weather","click",function(){
+
+});
